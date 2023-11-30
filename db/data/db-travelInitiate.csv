@@ -1,0 +1,4 @@
+ID,Employee_Department_department,Departure_City_city,Expected_date_of_departure,Billable,Customer_Name_name,Place_of_Visit_city,Expected_Date_Of_Arrival,Expected_Duration_In_Days,Purpose_of_Visit,Expected_Date_Of_Return
+2345,Finance,Modinagar,2023,Y,Shalini Chaudhary,Meerut,2023,2,personal,2024
+9098,Quality Management,Amritsar,2022,N,Laxmi Prajapati,Meerut,2022,3,work,2023
+4567,Talent Management,Delhi,2023,O,kapil Malhotra,Haryana,2023,2,personal,2023
