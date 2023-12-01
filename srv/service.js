@@ -52,10 +52,10 @@ const mysrv=function(srv){
           Expected_Duration_In_Days:req.data.Expected_Duration_In_Days,
           Purpose_of_Visit:req.data.Purpose_of_Visit,
           Expected_Date_Of_Return:req.data.Expected_Date_Of_Return,
-          Employee_Department:req.data.Employee_Department,
-          Departure_City:req.data.Departure_City,
-          Customer_Name:req.data.Customer_Name,
-          Place_of_Visit:req.data.Place_of_Visit,
+          Employee_Department_department:req.data.Employee_Department_department,
+          Departure_City_city:req.data.Departure_City_city,
+          Customer_Name_name:req.data.Customer_Name_name,
+          Place_of_Visit_city:req.data.Place_of_Visit_city,
     
     
             }).where({ID: req.data.ID}),

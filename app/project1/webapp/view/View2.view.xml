@@ -1,0 +1,15 @@
+<mvc:View controllerName="project1.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+   
+ 
+<Page id="_IDGenPage1"
+title="Keep calm and travelling On"
+       >
+ 
+ <Image id="_IDGenImage1" src="https://st3.depositphotos.com/1105977/32206/i/450/depositphotos_322069858-stock-photo-passengers-commercial-airplane-flying-above.jpg" width="90%" height="90%"></Image>
+ 
+</Page>
+<!-- <Button text="Go to" icon="sap-icon://arrow-right" press="onNext" class="go"></Button> -->
+ 
+</mvc:View>

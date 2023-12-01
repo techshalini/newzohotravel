@@ -1,0 +1,15 @@
+/* Enter your custom styles here */
+.vPanel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5 rem;
+}
+.panel{
+    margin: 4% 25%;
+}
+.hbox1{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}

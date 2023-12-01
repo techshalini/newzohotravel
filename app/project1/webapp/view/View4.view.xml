@@ -1,0 +1,183 @@
+<mvc:View
+    controllerName="project1.controller.View4"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+>
+    <Page id="_IDGenPage1"
+        title="Add Travel Request"
+        showNavButton="true"
+        navButtonPress="onBack"
+    >
+        <VBox id="_IDGenVBox1" class="vPanel">
+            <Panel id="_IDGenPanel1"
+                width="600px"
+                height="600px"
+                class="panel"
+            >
+                <Title id="_IDGenTitle1" text="Travel Initiate" />
+                <form:SimpleForm id="_IDGenSimpleForm1">
+                    <HBox id="_IDGenHBox1" class="hbox1">
+                        <VBox id="_IDGenVBox2">
+                            <Label id="_IDGenLabel1" text="Employee Department" />
+                            <Select
+                                width="200px"
+                                id="department"
+                                change="dep"
+                                items="{
+                        path: '/department'
+                    }"
+                            >
+                                <core:Item id="_IDGenItem1"
+                                    key="{department}"
+                                    text="{department}"
+                                />
+                            </Select>
+                        </VBox>
+                        <VBox id="_IDGenVBox3">
+                            <Label id="_IDGenLabel2" text="Employee ID" />
+                            <Select width="200px" id="emId" change="EID">
+                                <items>
+                                    <core:Item id="_IDGenItem2" text="Select" />
+
+                                    <core:Item id="_IDGenItem3" text="laxmi.prajapati@ingenxtec.com" />
+
+                                    
+                                </items>
+                            </Select>
+                        </VBox>
+                    </HBox>
+                    <HBox id="_IDGenHBox2" class="hbox1">
+                        <VBox id="_IDGenVBox4">
+                            <Label id="_IDGenLabel3" text="Departure City" />
+                            <Select id="city"
+                                width="200px" change="city"
+                                items="{
+                        path: '/city'
+                    }"
+                            >
+                                <core:Item id="_IDGenItem4"
+                                    key="{city}"
+                                    text="{city}"
+                                />
+                            </Select>
+                        </VBox>
+                        <VBox id="_IDGenVBox5">
+                            <Label id="_IDGenLabel4" text="Place of visit" />
+                            <Select id="city2"
+                                width="200px" change="POV"
+                                items="{
+                        path: '/city'
+                    }"
+                            >
+                                <core:Item id="_IDGenItem5"
+                                    key="{city}"
+                                    text="{city}"
+                                />
+                            </Select>
+                        </VBox>
+                    </HBox>
+                    <HBox id="_IDGenHBox3" class="hbox1">
+                        <VBox id="_IDGenVBox6">
+                            <Label id="_IDGenLabel5" text="Expected date of departure" />
+                            <DatePicker id="start"
+                                width="200px"
+                                change="handleChange"
+                                 
+            
+                                class="sapUiSmallMarginBottom"
+                            />
+                        </VBox>
+                        <VBox id="_IDGenVBox7">
+                            <Label id="_IDGenLabel6" text="Expected date of arrival" />
+                            <DatePicker id="date"
+                                width="200px"
+                           
+                                change="handleChange1"
+                                class="sapUiSmallMarginBottom"
+                            />
+                        </VBox>
+                    </HBox>
+                    <HBox id="_IDGenHBox4" class="hbox1">
+                        <VBox id="_IDGenVBox8">
+                            <Label id="_IDGenLabel7" text="Is billable to customer" />
+                            <Select width="200px" id="billable">
+                                <items>
+                                    <core:Item id="_IDGenItem6" text="Select" />
+
+                                    <core:Item id="_IDGenItem7" text="Yes" />
+
+                                    <core:Item id="_IDGenItem8" text="No" />
+                                    <core:Item id="_IDGenItem9" text="Others" />
+                                </items>
+                            </Select>
+                        </VBox>
+                        <VBox id="_IDGenVBox9">
+                            <Label id="_IDGenLabel8" text="Expected duration in days" />
+                            <Input id="day" enabled="false"
+                                value=""
+                                width="200px"
+                            />
+                        </VBox>
+                    </HBox>
+                    <HBox id="_IDGenHBox5" class="hbox1">
+                        <VBox id="_IDGenVBox10">
+                            <Label id="_IDGenLabel9" text="Customer name" />
+                            <Select id="name"
+                                width="200px"
+                                items="{
+                        path: '/customername'
+                    }"
+                            >
+                                <core:Item id="_IDGenItem10"
+                                    key="{customername}"
+                                    text="{customername}"
+                                />
+                            </Select>
+                        </VBox>
+                        <VBox id="_IDGenVBox11">
+                          <Label id="_IDGenLabel10" text="Expected date of return" />
+                    <DatePicker id="end"
+                        width="200px"
+                       
+                        change="handleChange2"
+                        class="sapUiSmallMarginBottom"
+                    />
+                           
+                        </VBox>
+                    </HBox>
+ <Label id="_IDGenLabel11" text="Purpose of visit" />
+                            <Input
+                            id="purpose"
+                                value=""
+                                width="350px"
+                            />
+                  
+                </form:SimpleForm>
+            </Panel>
+        </VBox>
+
+        <footer>
+            <Toolbar id="_IDGenToolbar1">
+                <Button id="_IDGenButton1"
+                    press="onSubmit"
+                    text="Submit"
+                    type="Emphasized"
+                />
+                <Button id="_IDGenButton2"
+                    press=""
+                    text="Save Draft"
+                    type="Default"
+                />
+                <Button id="_IDGenButton3"
+                    press=""
+                    text="Cancel"
+                    type="Default"
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

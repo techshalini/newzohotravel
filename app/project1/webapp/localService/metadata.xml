@@ -1,0 +1,115 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+</edmx:Reference>
+<edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+</edmx:Reference>
+<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+<edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+</edmx:Reference>
+<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml">
+<edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
+</edmx:Reference>
+<edmx:DataServices>
+<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="myservice">
+<EntityContainer Name="EntityContainer">
+<EntitySet Name="travelInitiate" EntityType="myservice.travelInitiate">
+<NavigationPropertyBinding Path="Employee_Department" Target="department"/>
+<NavigationPropertyBinding Path="Departure_City" Target="city"/>
+<NavigationPropertyBinding Path="Customer_Name" Target="customername"/>
+<NavigationPropertyBinding Path="Place_of_Visit" Target="city"/>
+</EntitySet>
+<EntitySet Name="department" EntityType="myservice.department"/>
+<EntitySet Name="city" EntityType="myservice.city"/>
+<EntitySet Name="customername" EntityType="myservice.customername"/>
+</EntityContainer>
+<EntityType Name="travelInitiate">
+<Key>
+<PropertyRef Name="ID"/>
+</Key>
+<Property Name="ID" Type="Edm.String" Nullable="false"/>
+<NavigationProperty Name="Employee_Department" Type="myservice.department">
+<ReferentialConstraint Property="Employee_Department_department" ReferencedProperty="department"/>
+</NavigationProperty>
+<Property Name="Employee_Department_department" Type="Edm.String"/>
+<NavigationProperty Name="Departure_City" Type="myservice.city">
+<ReferentialConstraint Property="Departure_City_city" ReferencedProperty="city"/>
+</NavigationProperty>
+<Property Name="Departure_City_city" Type="Edm.String"/>
+<Property Name="Expected_date_of_departure" Type="Edm.Date"/>
+<Property Name="Billable" Type="Edm.String"/>
+<NavigationProperty Name="Customer_Name" Type="myservice.customername">
+<ReferentialConstraint Property="Customer_Name_customername" ReferencedProperty="customername"/>
+</NavigationProperty>
+<Property Name="Customer_Name_customername" Type="Edm.String"/>
+<NavigationProperty Name="Place_of_Visit" Type="myservice.city">
+<ReferentialConstraint Property="Place_of_Visit_city" ReferencedProperty="city"/>
+</NavigationProperty>
+<Property Name="Place_of_Visit_city" Type="Edm.String"/>
+<Property Name="Expected_Date_Of_Arrival" Type="Edm.Date"/>
+<Property Name="Expected_Duration_In_Days" Type="Edm.String"/>
+<Property Name="Purpose_of_Visit" Type="Edm.String"/>
+<Property Name="Expected_Date_Of_Return" Type="Edm.Date"/>
+</EntityType>
+<EntityType Name="department">
+<Key>
+<PropertyRef Name="department"/>
+</Key>
+<Property Name="department" Type="Edm.String" Nullable="false"/>
+</EntityType>
+<EntityType Name="city">
+<Key>
+<PropertyRef Name="city"/>
+</Key>
+<Property Name="city" Type="Edm.String" Nullable="false"/>
+</EntityType>
+<EntityType Name="customername">
+<Key>
+<PropertyRef Name="customername"/>
+</Key>
+<Property Name="customername" Type="Edm.String" Nullable="false"/>
+</EntityType>
+<Annotations Target="myservice.EntityContainer/travelInitiate">
+<Annotation Term="Capabilities.ReadRestrictions">
+<Record Type="Capabilities.ReadRestrictionsType">
+<PropertyValue Property="Readable" Bool="true"/>
+</Record>
+</Annotation>
+<Annotation Term="Capabilities.UpdateRestrictions">
+<Record Type="Capabilities.UpdateRestrictionsType">
+<PropertyValue Property="Updatable" Bool="true"/>
+</Record>
+</Annotation>
+<Annotation Term="Capabilities.DeleteRestrictions">
+<Record Type="Capabilities.DeleteRestrictionsType">
+<PropertyValue Property="Deletable" Bool="true"/>
+</Record>
+</Annotation>
+<Annotation Term="Capabilities.InsertRestrictions">
+<Record Type="Capabilities.InsertRestrictionsType">
+<PropertyValue Property="Insertable" Bool="true"/>
+</Record>
+</Annotation>
+</Annotations>
+<Annotations Target="myservice.travelInitiate/Billable">
+<Annotation Term="Validation.AllowedValues">
+<Collection>
+<Record Type="Validation.AllowedValue">
+<Annotation Term="Core.SymbolicName" String="Yes"/>
+<PropertyValue Property="Value" String="Y"/>
+</Record>
+<Record Type="Validation.AllowedValue">
+<Annotation Term="Core.SymbolicName" String="No"/>
+<PropertyValue Property="Value" String="N"/>
+</Record>
+<Record Type="Validation.AllowedValue">
+<Annotation Term="Core.SymbolicName" String="Other"/>
+<PropertyValue Property="Value" String="O"/>
+</Record>
+</Collection>
+</Annotation>
+</Annotations>
+</Schema>
+</edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,183 @@
+<mvc:View controllerName="project1.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+   <Page id="_IDGenPage1"
+        title="Travel Request View"
+        showNavButton="true"
+        showHeader="true"
+        enableScrolling="false"
+        class="sapUiContentPadding"
+    >
+        <!--
+     <content>
+     
+     <Table >
+        <columns>
+                    <Column>
+                        <Label text="Status" />
+                    </Column>
+                    <Column>
+                        <Label text="Employee ID" />
+                    </Column>
+                    <Column>
+                        <Label text="Travel ID" />
+                    </Column>
+                    <Column>
+                        <Label text="Employee Department" />
+                    </Column>
+                    <Column>
+                        <Label text="Place of visit" />
+                    </Column>
+                    <Column>
+                        <Label text="Expected date of departure" />
+                    </Column>
+                    <Column>
+                        <Label text="Expected date of arrival" />
+                    </Column>
+                    <Column>
+                        <Label text="Purpose of visit" />
+                    </Column>
+                    <Column>
+                        <Label text="Expected duration in days" />
+                    </Column>
+                </columns>
+               
+     </Table>
+   
+     </content> -->
+ 
+        <content>
+       
+            <Table items="{/travelInitiate}" id="table" mode="SingleSelectLeft">
+                <columns >
+                    <!-- <Column width="9rem">
+                        <Label text="Status" />
+                    </Column> -->
+                    <Column id="_IDGenColumn1" width="9rem">
+                        <Label id="_IDGenLabel1" text="Employee ID" />
+                    </Column>
+                    <!-- <Column
+                        width="9rem"
+                        hAlign="End"
+                    >
+                        <Label text="Travel ID" />
+                    </Column> -->
+                    <Column id="_IDGenColumn2" width="11rem">
+                        <Label id="_IDGenLabel2" text="Employee Department" />
+                    </Column>
+                    <Column id="_IDGenColumn3" width="11rem">
+                        <Label id="_IDGenLabel3" text="Place of visit" />
+                    </Column>
+                    <Column id="_IDGenColumn4" width="12rem">
+                        <Label id="_IDGenLabel4" text="Expected date of departure" />
+                    </Column>
+                    <Column id="_IDGenColumn5" width="11rem">
+                        <Label id="_IDGenLabel5" text="Expected date of arrival" />
+                    </Column>
+                    <Column id="_IDGenColumn6" width="11rem">
+                        <Label id="_IDGenLabel6" text="Purpose of visit" />
+                    </Column>
+                    <Column id="_IDGenColumn7" width="12rem">
+                        <Label id="_IDGenLabel7" text="Expected duration in days" />
+                    </Column>
+                    <Column id="_IDGenColumn8" width="12rem">
+                        <Label id="_IDGenLabel8" text="Is billable to customer" />
+                    </Column>
+                    <Column id="_IDGenColumn9" width="11rem">
+                        <Label id="_IDGenLabel9" text="Customer name" />
+                    </Column>
+                    <!-- <Column
+                        width="9rem"
+                        hAlign="Center"
+                    >
+                        <Label text="Added By" />
+                    </Column> -->
+                    <!-- <Column
+                        width="11rem"
+                        hAlign="Center"
+                    >
+                        <Label text="Added Time" />
+                    </Column> -->
+                     <!-- <Column width="11rem">
+                        <Label text="Modified Time" />
+                    </Column> -->
+                     <Column id="_IDGenColumn10" width="11rem">
+                        <Label id="_IDGenLabel10" text="Departure City" />
+                    </Column>
+                     <Column id="_IDGenColumn11" width="12rem">
+                        <Label id="_IDGenLabel11" text="Expected date of return" />
+                    </Column>
+                     <!-- <Column width="9rem">
+                        <Label text="Status" />
+                    </Column> -->
+ 
+                </columns>
+ 
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1"
+                    >
+                        <cells>
+                            <Text id="_IDGenText1"
+                                text="{ID}"
+                            />
+ 
+                            <Text id="_IDGenText2"
+                                text="{Employee_Department_department}"
+                            />
+ 
+                            <Text id="_IDGenText3"
+                                text="{Place_of_Visit_city}"
+                            />
+ 
+                            <Text id="_IDGenText4"
+                                text="{Expected_date_of_departure}"
+                            />
+ 
+                            <Text id="_IDGenText5"
+                                text="{Expected_Date_Of_Arrival}"
+                            />
+ 
+                            <Text id="_IDGenText6"
+                                text="{Purpose_of_Visit}"
+                            />
+ 
+                            <Text id="_IDGenText7"
+                                text="{Expected_Duration_In_Days}"
+                            />
+ 
+                            <Text id="_IDGenText8"
+                                text="{Billable}"
+                            />
+                            <Text id="_IDGenText9"
+                                text="{Customer_Name_customername}"
+                            />
+                            <Text id="_IDGenText10"
+                                text="{Departure_City_city}"
+                            />
+                            <Text id="_IDGenText11"
+                                text="{Expected_Date_Of_Return}"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+ 
+        <footer>
+            <Toolbar id="_IDGenToolbar1">
+                <Button id="_IDGenButton1"
+                    press="onAdd"
+                    text="Add Record"
+                    type="Emphasized"
+                    icon="sap-icon://add"
+                />
+                <Button id="_IDGenButton2" text="Delete"
+                type="Attention" press="onDeleteLineItem"
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+ 
+ 
+ 
+</mvc:View>

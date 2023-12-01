@@ -1,0 +1,28 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <headerContent >
+</headerContent>
+ 
+<content>
+<!-- <SearchField id="idsf"  search="onSearch"></SearchField> -->
+ 
+<List id="idlst" itemPress="onNavNext"
+>
+ 
+ 
+<ObjectListItem id="_IDGenObjectListItem1" title="Travel Request" icon="sap-icon://request" type="Active" press="onPress"></ObjectListItem>
+<ObjectListItem id="_IDGenObjectListItem2" title="Travel Expense" icon="sap-icon://expense-report" type="Active" press="onPress"></ObjectListItem>
+ 
+ 
+ 
+ 
+</List>
+ 
+ 
+ 
+<!-- <Button text="Go to" icon="sap-icon://arrow-right" press="onNext"></Button> -->
+</content>
+    </Page>
+</mvc:View>

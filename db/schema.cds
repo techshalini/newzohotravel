@@ -16,7 +16,7 @@ entity city{
     key  city:String
  }
  entity customername {
-    key  name:String
+    key  customername:String
    
  }
 

@@ -5,18 +5,36 @@ POST http://localhost:4004/odata/v4/myservice/travelInitiate
 Content-Type: application/json
 
 {
-     "ID": "1234590",
-    "Employee_Department_department":"Delivery Excellence - on premise",
-    "Departure_City_city":"Meerut",
-    "Expected_date_of_departure":"2023-09-18",
-    "Billable": "N",
-    "Customer_Name_name":"Shivani",
-    "Place_of_Visit_city":"Delhi",
-    "Expected_Date_Of_Arrival":"2023-11-12",
+     "ID": "5890976",
+    "Employee_Department_department":"Delivery Excellence - on cloud",
+    "Departure_City_city":"Delhi",
+    "Expected_date_of_departure":"2023-10-10",
+    "Billable": "O",
+    "Customer_Name_customername":"Vikram",
+    "Place_of_Visit_city":"Hyderabad",
+    "Expected_Date_Of_Arrival":"2023-10-11",
     "Expected_Duration_In_Days":"4",
     "Purpose_of_Visit":"Work",
-    "Expected_Date_Of_Return":"2022-08-13"
+    "Expected_Date_Of_Return":"2022-10-12"
 }
 
 ###
 DELETE http://localhost:4004/odata/v4/myservice/travelInitiate/1234590
+
+###
+PATCH http://localhost:4004/odata/v4/myservice/travelInitiate/2345
+Content-Type: application/json
+
+{
+    
+    "Employee_Department_department":"Finance",
+    "Departure_City_city":"Pune",
+    "Expected_date_of_departure":"2023-10-10",
+    "Billable": "O",
+    "Customer_Name_name":"Piyush",
+    "Place_of_Visit_city":"Delhi",
+    "Expected_Date_Of_Arrival":"2023-12-12",
+    "Expected_Duration_In_Days":"2",
+    "Purpose_of_Visit":"Personal",
+    "Expected_Date_Of_Return":"2022-09-10"
+}
